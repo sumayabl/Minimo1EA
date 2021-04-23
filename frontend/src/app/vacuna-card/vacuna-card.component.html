@@ -1,0 +1,22 @@
+<div class="vacuna-card" *ngIf="vacuna">
+
+    <div class="vacuna-name">
+        Student {{index+1}}: {{vacuna.name}}
+    </div>
+
+    <div class="vacuna-description">
+        Description: {{vacuna.description}}
+    </div>
+
+    <div class="vacuna-technology">
+        Technology: {{vacuna.technology}}
+    </div>
+
+    <div class="vacuna-date">
+        Date: {{vacuna.date}}
+    </div>
+    
+    <button (click)="updateVacuna(vacuna._id)" class="button" >Update</button>
+
+</div>
+<br>

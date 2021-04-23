@@ -1,0 +1,16 @@
+<div class="text">
+    <h1>VACUNAS</h1>
+  </div>
+
+  <div class="center">
+    <button (click)="newVacuna()" class="button" >Add new vacuna</button>
+    <button (click)="admin()" class="button"> Back </button>
+  </div>
+
+  <div class="vacunas">
+      <app-vacuna-card *ngFor="let vacuna of vacunas; index as i"
+        [vacuna]="vacuna" [index]="i">
+      </app-vacuna-card>  
+  </div>
+
+  

@@ -1,0 +1,45 @@
+<div class="login">
+
+  <h2 class="login-header">Update Student</h2>
+  <form [formGroup]="updateForm" class="login-container" (ngSubmit)="submitUpdate()">
+    <input type="name" placeholder="Name*" formControlName="name" />
+    <ng-container
+      *ngIf="!formControls.name.valid &&formControls.name.touched"
+    >
+      <p *ngIf="formControls.name.errors.required">
+        Name is required
+      </p>
+    </ng-container>
+
+    <input type="description" placeholder="Description*" formControlName="description" />
+    <ng-container
+      *ngIf="!formControls.description.valid &&formControls.description.touched"
+    >
+      <p *ngIf="formControls.description.errors.required">
+        Description is required
+      </p>
+    </ng-container>
+
+    <input type="technology" placeholder="Technology*" formControlName="technology" />
+    <ng-container
+      *ngIf="!formControls.technology.valid &&formControls.technology.touched"
+    >
+      <p *ngIf="formControls.technology.errors.required">
+        Technology is required
+      </p>
+    </ng-container>
+
+    <input type="date" placeholder="Date*" formControlName="date" />
+    <ng-container
+      *ngIf="!formControls.date.valid &&formControls.date.touched"
+    >
+      <p *ngIf="formControls.date.errors.required">
+        Date is required
+      </p>
+    </ng-container>
+
+    <p>
+      <input type="submit" value="Submit" [disabled]="updateForm.invalid" />
+    </p>
+  </form>
+</div>
